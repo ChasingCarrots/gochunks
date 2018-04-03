@@ -10,10 +10,7 @@ The header is formatted like this:
 uint16 version
 uint16 numChunks
 ```
-<<<<<<< HEAD
 The version field may be updated to allow for future changes to the system.
-=======
->>>>>>> b696b74272ee7b00b10d2f277edb11e84a7fef39
 
 ### Chunks
 Chunks consist of a header followed by a payload. The header is formatted like this:
@@ -23,11 +20,7 @@ string name (utf8, of the byte length given above)
 uint16 version
 uint32 payloadSize (in bytes)
 ```
-<<<<<<< HEAD
 It is followed by `payloadSize` many raw bytes whose interpretation is up to the program handling the chunks. The semantics of the `version` field are up to you: While the name identifies the type of chunk, the version may be used to use differentiate between different versions of a chunk's payload.
-=======
-It is followed by `payloadSize` many raw bytes whose interpretation is up to the program handling the chunks.
->>>>>>> b696b74272ee7b00b10d2f277edb11e84a7fef39
 
 ## Writing Chunks
 Chunk files are written using the `ChunkWriter` struct:
